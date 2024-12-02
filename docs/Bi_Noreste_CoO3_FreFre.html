@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Juan Antonio Vazquez Morales">
+<meta name="description" content="Gráficas de la distribución de Frechet Frechet">
+
+<title>Bi_Noreste_CoO3_FreFre – J V Z</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f69cb1d03d158ce0efdfb8033f70f2ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">J V Z</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./TesisHome.html"> 
+<span class="menu-text">Tesis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./404.html"> 
+<span class="menu-text">Publicaciones</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./404.html"> 
+<span class="menu-text">Clases</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#gráficos" id="toc-gráficos" class="nav-link active" data-scroll-target="#gráficos">Gráficos</a></li>
+  <li><a href="#código" id="toc-código" class="nav-link" data-scroll-target="#código">Código</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bi_Noreste_CoO3_FreFre</h1>
+</div>
+
+<div>
+  <div class="description">
+    Gráficas de la distribución de Frechet Frechet
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Juan Antonio Vazquez Morales </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="gráficos" class="level2">
+<h2 class="anchored" data-anchor-id="gráficos">Gráficos</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRAlphaY.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRAlphaY.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRAlphaZ.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRAlphaZ.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRSY.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRSY.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRSZ.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRSZ.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRTheta.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/BGRTheta.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/CurvasDensidadAmbasFrechet.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/CurvasDensidadAmbasFrechet.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/CurvasDistribucionAmbasFrechet.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/CurvasDistribucionAmbasFrechet.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensidadAmbasFrechet.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensidadAmbasFrechet.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensityAlphaY.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensityAlphaY.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensityAlphaZ.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensityAlphaZ.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensitySY.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensitySY.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensitySZ.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensitySZ.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensityTheta.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DensityTheta.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DistribucionAmbasFrechet.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/DistribucionAmbasFrechet.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistoryAlphaY.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistoryAlphaY.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistoryAlphaZ.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistoryAlphaZ.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistorySY.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistorySY.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistorySZ.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistorySZ.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistoryTheta.png" class="lightbox" data-gallery="galeria"><img src="imagenes-raw/Bivariadas/Noreste/CO y O3/FrechetFrechet/HistoryTheta.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="código" class="level2">
+<h2 class="anchored" data-anchor-id="código">Código</h2>
+<p>Este es el código utilizado para generar estos gáficos</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>#########################################################################</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>model{</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    C &lt;- 100000</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    # Truco de los ceros</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    for (i in 1:N){</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        zeroY[i] &lt;- 0</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        zeroZ[i] &lt;- 0</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        zeroT[i] &lt;- 0</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        zeroY[i] ~ dpois(phiY[i])</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        zeroZ[i] ~ dpois(phiZ[i])</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        zeroT[i] ~ dpois(phiT[i])</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        # Distribuciones</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        u[i] &lt;- exp(-pow(y[i]/sY, -alphaY)) # Acumulada Y</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        v[i] &lt;- exp(-pow(z[i]/sZ, -alphaZ)) # Acumulada Z</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        # Densidades</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        fY[i] &lt;- (alphaY / sY) * pow(y[i]/sY , -alphaY - 1) * u[i]</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        fZ[i] &lt;- (alphaZ / sZ) * pow(z[i]/sZ , -alphaZ - 1) * v[i]</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        # Gumbel-Hougaard</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        CYZ[i] &lt;- pow(-log(u[i]), theta-1) * pow(-log(v[i]), theta-1) * (1/(u[i]*v[i])) * exp(-pow(pow(-log(u[i]),theta) + pow(-log(v[i]), theta),1/theta)) * (pow(pow(-log(u[i]),theta) + pow(-log(v[i]), theta), 2/theta-2) + (theta-1)*pow(pow(-log(u[i]),theta) + pow(-log(v[i]), theta), 1/theta-2))</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        phiY[i] &lt;- -log(fY[i]) + C</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        phiZ[i] &lt;- -log(fZ[i]) + C</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        phiT[i] &lt;- -log(fY[i] * fZ[i] * CYZ[i]) + C</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    # Aprioris CO</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    alphaY ~  dunif(0,10) </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    sY ~ dunif(0,10)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    # Aprioris O3</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    alphaZ ~  dunif(0,10) </span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    sZ ~ dunif(0,200) </span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    # Apriori de la theta Gumbel-Hougaard</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    theta ~ dunif(1,15)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>data</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>list(y=c(22.90, 25.30, 26.20, 21.60, 20.60, 9.80, 17.80, 15.70, 13.40, 17.10, 23.20, 31.50, 27.80, 18.80, 24.10, 18.40, 16.40, 13.40, 16.10, 16.00, 14.20, 19.00, 17.10, 19.90, 24.80, 23.30, 20.00, 16.70, 16.20, 12.30, 18.00, 10.90, 11.50, 14.00, 20.20, 22.60, 24.00, 22.10, 18.30, 13.70, 12.80, 12.00, 9.70, 7.70, 9.50, 10.70, 12.00, 24.20, 24.50, 18.40, 17.50, 19.30, 12.80, 11.60, 11.70, 14.10, 10.20, 12.90, 21.00, 23.80, 20.00, 19.30, 16.30, 14.00, 11.00, 9.00, 10.20, 11.40, 9.90, 11.00, 16.50, 19.30, 21.20, 17.50, 13.60, 16.00, 13.80, 10.50, 8.70, 10.80, 13.40, 13.70, 19.80, 21.70, 19.00, 16.90, 18.40, 22.60, 16.90, 13.90, 9.60, 9.90, 9.70, 13.30, 10.50, 12.20, 20.20, 18.60, 18.10, 12.40, 16.10, 10.60, 8.20, 12.60, 12.20, 15.90, 9.20, 22.00, 16.50, 15.30, 13.90, 13.10, 16.50, 7.50, 8.90, 9.20, 8.60, 7.70, 10.00, 13.20, 14.20, 13.20, 12.90, 13.70, 12.70, 8.90, 8.60, 10.50, 8.10, 10.20, 14.00, 19.60, 18.60, 19.50, 14.10, 12.70, 12.20, 8.40, 7.20, 12.10, 8.80, 9.50, 16.30, 11.00, 11.00, 11.30, 16.00, 8.70, 9.80, 6.20, 6.70, 6.80, 6.20, 7.90, 12.10, 10.40, 11.30, 13.90, 10.90, 12.50, 7.70, 8.30, 7.70, 6.20, 6.00, 7.20, 9.30, 12.70, 11.20, 9.70, 8.80, 8.20, 10.30, 7.30, 4.60, 5.30, 7.30, 7.50, 9.50, 9.90, 11.10, 10.30, 10.80, 9.20, 7.70, 6.20, 7.30, 6.30, 5.10, 9.00, 9.00, 10.40, 9.40, 11.40, 7.30, 6.90, 6.60, 3.80, 5.20, 4.60, 5.30, 6.00, 6.10, 11.70, 7.10, 9.70, 6.60, 6.80, 6.30, 4.20, 3.80, 3.90, 3.90, 6.00, 5.80, 6.50, 6.80, 7.40, 7.00, 6.70, 4.90, 4.00, 3.90, 5.00, 2.90, 5.70, 5.70, 6.60, 7.80, 8.60, 4.80, 5.60, 4.70, 3.80, 4.20, 3.00, 4.00, 3.70, 4.20, 7.90, 7.50, 6.80, 5.70, 6.10, 5.50, 4.00, 3.90, 3.80, 4.70, 5.20, 5.30, 11.30, 7.80, 5.40, 5.30, 6.30, 3.90, 3.70, 3.20, 3.40, 4.10, 6.80, 5.60, 6.70, 7.40, 5.80, 6.00, 7.50, 5.20, 4.80, 3.20, 5.40, 5.70, 5.10, 6.40, 7.70, 6.10, 8.10, 5.50, 7.70, 4.80, 3.50, 2.90, 3.40, 5.20, 3.70, 5.20, 6.30, 6.20, 6.30, 4.30, 5.90, 4.90, 3.60, 3.50, 4.30, 3.60, 6.20, 4.40, 6.30, 7.80, 5.10, 4.60, 5.70, 6.00, 3.50, 3.80, 3.60, 3.10, 3.80, 5.40, 5.50, 10.00, 8.30, 5.10, 5.00, 5.50, 4.30, 3.10, 3.00, 2.70, 3.40, 5.50, 4.60, 5.80, 5.20, 4.60, 7.80, 5.70, 2.80, 3.50, 3.90, 3.30, 3.30, 3.70, 6.00, 5.40, 4.70, 4.80, 3.70, 3.20, 2.00, 2.50, 2.10, 3.10, 3.40, 3.90, 4.40, 4.50, 5.20, 4.70, 3.70, 4.00, 2.50, 2.40, 2.00, 2.40, 2.80, 3.90, 4.10, 4.60, 4.00, 2.70, 2.00, 2.50, 1.40, 1.50, 1.60, 1.50, 2.80, 3.10, 4.10, 3.35, 4.66, 2.95, 3.08, 1.78, 1.94, 2.05, 1.98, 1.94, 3.35, 2.49, 3.74), z=c(153, 156, 159, 171, 160, 122, 116, 198, 85, 114, 121, 189, 139, 169, 214, 193, 285, 241, 157, 206, 191, 168, 225, 233, 173, 182, 242, 206, 240, 235, 191, 212, 186, 187, 219, 263, 221, 192, 213, 208, 188, 222, 142, 187, 145, 272, 189, 200, 194, 185, 207, 212, 213, 185, 188, 156, 146, 178, 220, 210, 276, 183, 211, 218, 251, 201, 162, 179, 181, 199, 198, 223, 288, 172, 179, 174, 190, 208, 168, 146, 161, 136, 181, 179, 165, 192, 189, 196, 210, 197, 134, 180, 192, 202, 178, 194, 209, 223, 249, 201, 206, 187, 154, 177, 201, 285, 157, 212, 215, 206, 208, 210, 200, 171, 169, 112, 99, 147, 154, 201, 192, 207, 222, 185, 201, 169, 151, 132, 131, 164, 187, 158, 189, 149, 194, 175, 171, 189, 144, 126, 124, 181, 157, 161, 175, 177, 181, 177, 163, 149, 117, 132, 128, 159, 165, 203, 121, 159, 155, 210, 146, 122, 114, 130, 127, 123, 155, 157, 129, 152, 163, 162, 186, 119, 136, 107, 123, 153, 153, 154, 156, 122, 145, 178, 156, 126, 106, 131, 120, 109, 139, 137, 125, 124, 157, 126, 177, 129, 105, 110, 99, 109, 145, 122, 127, 149, 153, 177, 136, 138, 117, 93, 109, 113, 124, 139, 152, 130, 126, 184, 142, 102, 89, 118, 110, 92, 128, 155, 155, 152, 166, 143, 144, 115, 109, 111, 118, 146, 146, 115, 130, 141, 155, 157, 162, 150, 114, 100, 96, 129, 146, 115, 97, 111, 159, 131, 150, 114, 118, 111, 158, 118, 151, 143, 119, 121, 163, 143, 142, 128, 107, 102, 111, 140, 165, 142, 126, 137, 132, 180, 162, 130, 100, 142, 113, 124, 125, 126, 130, 160, 142, 160, 138, 123, 115, 113, 122, 125, 114, 130, 121, 140, 158, 138, 160, 131, 120, 118, 128, 134, 116, 127, 141, 162, 163, 144, 172, 133, 120, 118, 107, 113, 104, 110, 136, 143, 124, 149, 171, 134, 118, 109, 132, 123, 131, 115, 115, 134, 124, 141, 151, 130, 115, 119, 117, 111, 146, 143, 112, 149, 147, 158, 142, 121, 111, 114, 108, 112, 107, 127, 118, 113, 126, 127, 127, 100, 96, 107, 114, 135, 127, 115, 101, 146, 131, 146, 133, 114, 115, 127, 120, 113, 128, 133), N=384)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>inits</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>list(alphaY = 1.58, sY = 4.64, alphaZ = 2.48, sZ = 171.20, theta = 2.55)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>list(alphaY = 1.16, sY = 5.16, alphaZ = 3.69, sZ = 156.27, theta = 5.01)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>list(alphaY = 1.43, sY = 5.13, alphaZ = 4.89, sZ = 166.00, theta = 3.56)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>list(alphaY = 1.67, sY = 4.94, alphaZ = 5.54, sZ = 140.22, theta = 1.82)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>list(alphaY = 1.94, sY = 4.24, alphaZ = 5.38, sZ = 133.79, theta = 1.23)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024 Juan Antonio Vazquez.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"right","loop":true,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
